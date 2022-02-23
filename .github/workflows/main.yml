@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  qovery_deployment_job:
+    runs-on: ubuntu-latest
+    name: A job to deploy app on Qovery
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Qovery action step
+        uses: Qovery/qovery-action@v0.2
+        id: qovery
+        with:
+          qovery-organization-id: cf8e78e6-159b-45b6-bfb5-2430c9505080
+          qovery-environment-id: 97683dd2-05f4-471e-b975-5aa782a10ea3
+          qovery-application-id: 4aa76065-68b3-41ef-aa1d-46be67012bef
+          qovery-api-token: ${{secrets.QOVERY_API_TOKEN}}
