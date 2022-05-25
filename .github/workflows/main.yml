@@ -17,4 +17,4 @@ jobs:
           qovery-environment-name: dev
           qovery-application-names: tetris
           qovery-api-token: ${{secrets.QOVERY_API_TOKEN}}
-          application-commit-id: ${{ github.sha }}
+          qovery-application-commit-id: ${{ github.sha }}
