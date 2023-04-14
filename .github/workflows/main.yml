@@ -6,12 +6,13 @@ jobs:
     name: A job to deploy app on Qovery
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Qovery action step
         uses: Qovery/qovery-action@main
         id: qovery
         with:
-          qovery-organization-id: 460616f0-94da-4d35-b631-6fa4ed08eb9a
-          qovery-environment-id: 1d3be85e-13bc-44e2-b285-11017b76f099
-          qovery-application-id: ea2e211d-12d6-4af1-9de8-9c627b931e4d
-          qovery-api-token: ${{secrets.QOVERY_API_TOKEN}}
+          qovery-organization-id: ${{secrets.QOVERY_ORGANIZATION_ID}} 
+          qovery-project-id: ${{secrets.QOVERY_PROJECT_ID}}
+          qovery-environment-id: ${{secrets.QOVERY_ENVIRONMENT_ID}}
+          qovery-application-ids: ${{secrets.QOVERY_APPLICATION_IDS}}
+          qovery-api-token: ${{secrets.QOVERY_API_TOKEN}} 
