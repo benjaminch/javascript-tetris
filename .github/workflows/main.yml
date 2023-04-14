@@ -11,7 +11,7 @@ jobs:
         uses: Qovery/qovery-action@main
         id: qovery
         with:
-          qovery-organization-id: cf8e78e6-159b-45b6-bfb5-2430c9505080
-          qovery-environment-id: 97683dd2-05f4-471e-b975-5aa782a10ea3
-          qovery-application-id: 4aa76065-68b3-41ef-aa1d-46be67012bef
+          qovery-organization-id: 460616f0-94da-4d35-b631-6fa4ed08eb9a
+          qovery-environment-id: 1d3be85e-13bc-44e2-b285-11017b76f099
+          qovery-application-id: ea2e211d-12d6-4af1-9de8-9c627b931e4d
           qovery-api-token: ${{secrets.QOVERY_API_TOKEN}}
